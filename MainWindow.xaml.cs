@@ -464,6 +464,40 @@ namespace WordleWPF
             }else if(number == 5 && check == result)
             {
                 MessageBox.Show("End!\n You Win!!!");
+
+            }else if(check == result)
+            {
+                MessageBox.Show("You Win!!!");
+                Cell1.IsEnabled = false;
+                Cell2.IsEnabled = false;
+                Cell3.IsEnabled = false;
+                Cell4.IsEnabled = false;
+                Cell5.IsEnabled = false;
+                Cell6.IsEnabled = false;
+                Cell7.IsEnabled = false;
+                Cell8.IsEnabled = false;
+                Cell9.IsEnabled = false;
+                Cell10.IsEnabled = false;
+                Cell11.IsEnabled = false;
+                Cell12.IsEnabled = false;
+                Cell13.IsEnabled = false;
+                Cell14.IsEnabled = false;
+                Cell15.IsEnabled = false;
+                Cell16.IsEnabled = false;
+                Cell17.IsEnabled = false;
+                Cell18.IsEnabled = false;
+                Cell19.IsEnabled = false;
+                Cell20.IsEnabled = false;
+                Cell21.IsEnabled = false;
+                Cell22.IsEnabled = false;
+                Cell23.IsEnabled = false;
+                Cell24.IsEnabled = false;
+                Cell25.IsEnabled = false;
+                Cell26.IsEnabled = false;
+                Cell27.IsEnabled = false;
+                Cell28.IsEnabled = false;
+                Cell29.IsEnabled = false;
+                Cell30.IsEnabled = false;
             }
         }
         static string GetText(string a1, string a2, string a3, string a4, string a5)
@@ -717,7 +751,100 @@ namespace WordleWPF
         }
 
         private void ResetButton_Click(object sender, RoutedEventArgs e)
+
         {
+            num = 0;
+            Cell1.Background = Brushes.White;
+            Cell2.Background = Brushes.White;
+            Cell3.Background = Brushes.White;
+            Cell4.Background = Brushes.White;
+            Cell5.Background = Brushes.White;
+            Cell6.Background = Brushes.White;
+            Cell7.Background = Brushes.White;
+            Cell8.Background = Brushes.White;
+            Cell9.Background = Brushes.White;
+            Cell10.Background = Brushes.White;
+            Cell11.Background = Brushes.White;
+            Cell12.Background = Brushes.White;
+            Cell13.Background = Brushes.White;
+            Cell14.Background = Brushes.White;
+            Cell15.Background = Brushes.White;
+            Cell16.Background = Brushes.White;
+            Cell17.Background = Brushes.White;
+            Cell18.Background = Brushes.White;
+            Cell19.Background = Brushes.White;
+            Cell20.Background = Brushes.White;
+            Cell21.Background = Brushes.White;
+            Cell22.Background = Brushes.White;
+            Cell23.Background = Brushes.White;
+            Cell24.Background = Brushes.White;
+            Cell25.Background = Brushes.White;
+            Cell26.Background = Brushes.White;
+            Cell27.Background = Brushes.White;
+            Cell28.Background = Brushes.White;
+            Cell29.Background = Brushes.White;
+            Cell30.Background = Brushes.White;
+            Cell1.Text = "";
+            Cell2.Text = "";
+            Cell3.Text = "";
+            Cell4.Text = "";
+            Cell5.Text = "";
+            Cell6.Text = "";
+            Cell7.Text = "";
+            Cell8.Text = "";
+            Cell9.Text = "";
+            Cell10.Text = "";
+            Cell11.Text = "";
+            Cell12.Text = "";
+            Cell13.Text = "";
+            Cell14.Text = "";
+            Cell15.Text = "";
+            Cell16.Text = "";
+            Cell17.Text = "";
+            Cell18.Text = "";
+            Cell19.Text = "";
+            Cell20.Text = "";
+            Cell21.Text = "";
+            Cell22.Text = "";
+            Cell23.Text = "";
+            Cell24.Text = "";
+            Cell25.Text = "";
+            Cell26.Text = "";
+            Cell27.Text = "";
+            Cell28.Text = "";
+            Cell29.Text = "";
+            Cell30.Text = "";
+            Cell1.IsEnabled = true;
+            Cell2.IsEnabled = true;
+            Cell3.IsEnabled = true;
+            Cell4.IsEnabled = true;
+            Cell5.IsEnabled = true;
+            Cell6.IsEnabled = true;
+            Cell7.IsEnabled = true;
+            Cell8.IsEnabled = true;
+            Cell9.IsEnabled = true;
+            Cell10.IsEnabled = true;
+            Cell11.IsEnabled = true;
+            Cell12.IsEnabled = true;
+            Cell13.IsEnabled = true;
+            Cell14.IsEnabled = true;
+            Cell15.IsEnabled = true;
+            Cell16.IsEnabled = true;
+            Cell17.IsEnabled = true;
+            Cell18.IsEnabled = true;
+            Cell19.IsEnabled = true;
+            Cell20.IsEnabled = true;
+            Cell21.IsEnabled = true;
+            Cell22.IsEnabled = true;
+            Cell23.IsEnabled = true;
+            Cell24.IsEnabled = true;
+            Cell25.IsEnabled = true;
+            Cell26.IsEnabled = true;
+            Cell27.IsEnabled = true;
+            Cell28.IsEnabled = true;
+            Cell29.IsEnabled = true;
+            Cell30.IsEnabled = true;
+
 
         }
     }
