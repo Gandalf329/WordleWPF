@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,12 +23,43 @@ namespace WordleWPF
     {
         public MainWindow()
         {
+            
+            GetDict();
+            
             InitializeComponent();
+            
         }
         int num = 0;
-        string result = "hello";
+        string result = "";
         string check = "";
+        string path = "D:\\progVis\\Test6\\en_five.txt";
+        Dictionary<int, string> dict_counts = new Dictionary<int, string>();
 
+        public void GetWord()
+        {
+            Random rnd = new Random();
+            int random = rnd.Next(1, dict_counts.Count);
+            result = dict_counts[random];
+            TextBlock1.Text = result;
+        }
+        
+        async Task GetDict()
+        {
+            
+            int number = 0;
+            
+            using (StreamReader reader = new StreamReader(path))
+            {
+                //var dict_counts = new Dictionary<int, string>();
+                string? line;
+                while ((line = await reader.ReadLineAsync()) != null)
+                {
+                    dict_counts.Add(number, line);
+                    number += 1;
+                }
+            }
+            GetWord();
+        }
         public void Check(int number)
         {
 
@@ -704,6 +736,7 @@ namespace WordleWPF
             {
                 
                 case 0:
+                    
                     check = GetText(Cell1.Text,Cell2.Text,Cell3.Text, Cell4.Text, Cell5.Text);
                     break;
                 case 1:
@@ -753,6 +786,7 @@ namespace WordleWPF
         private void ResetButton_Click(object sender, RoutedEventArgs e)
 
         {
+            GetWord();
             num = 0;
             Cell1.Background = Brushes.White;
             Cell2.Background = Brushes.White;

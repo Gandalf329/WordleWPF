@@ -39,6 +39,7 @@
             <TextBox x:Name="Cell28" MaxLength="1" HorizontalAlignment="Left" Margin="217,363,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="52" Height="55" FontSize="36" TextAlignment="Center" KeyUp="Cell28_KeyUp"/>
             <TextBox x:Name="Cell29" MaxLength="1" HorizontalAlignment="Left" Margin="274,363,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="52" Height="55" FontSize="36" TextAlignment="Center" KeyUp="Cell29_KeyUp"/>
             <TextBox x:Name="Cell30" MaxLength="1" HorizontalAlignment="Left" Margin="331,363,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="52" Height="55" FontSize="36" TextAlignment="Center"/>
+            <TextBlock x:Name="TextBlock1" Canvas.Left="199" TextWrapping="Wrap" Text="TextBlock" Canvas.Top="450"/>
 
         </Canvas>
         <Button x:Name="CheckButton" Content="Enter" HorizontalAlignment="Left" Margin="383,423,0,0" VerticalAlignment="Top" Background="#FFD2FFC3" Height="55" Width="117" Click="CheckButton_Click" IsDefault="True"/>
