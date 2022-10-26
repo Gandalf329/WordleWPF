@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -736,23 +737,52 @@ namespace WordleWPF
             {
                 
                 case 0:
-                    
                     check = GetText(Cell1.Text,Cell2.Text,Cell3.Text, Cell4.Text, Cell5.Text);
+                    if (dict_counts.ContainsValue(check) != true)
+                    {
+                        num -= 1;
+                        MessageBox.Show("Not in word list");
+                    }
                     break;
                 case 1:
                     check = GetText(Cell6.Text, Cell7.Text, Cell8.Text, Cell9.Text, Cell10.Text);
+                    if (dict_counts.ContainsValue(check) != true)
+                    {
+                        num -= 1;
+                        MessageBox.Show("Not in word list");
+                    }
                     break;
                 case 2:
                     check = GetText(Cell11.Text, Cell12.Text, Cell13.Text, Cell14.Text, Cell15.Text);
+                    if (dict_counts.ContainsValue(check) != true)
+                    {
+                        num -= 1;
+                        MessageBox.Show("Not in word list");
+                    }
                     break;
                 case 3:
                     check = GetText(Cell16.Text, Cell17.Text, Cell18.Text, Cell19.Text, Cell20.Text);
+                    if (dict_counts.ContainsValue(check) != true)
+                    {
+                        num -= 1;
+                        MessageBox.Show("Not in word list");
+                    }
                     break;
                 case 4:
                     check = GetText(Cell21.Text, Cell22.Text, Cell23.Text, Cell24.Text, Cell25.Text);
+                    if (dict_counts.ContainsValue(check) != true)
+                    {
+                        num -= 1;
+                        MessageBox.Show("Not in word list");
+                    }
                     break;
                 case 5:
                     check = GetText(Cell26.Text, Cell27.Text, Cell28.Text, Cell29.Text, Cell30.Text);
+                    if (dict_counts.ContainsValue(check) != true)
+                    {
+                        num -= 1;
+                        MessageBox.Show("Not in word list");
+                    }
                     break;
                 default:
                     break;
@@ -880,6 +910,16 @@ namespace WordleWPF
             Cell30.IsEnabled = true;
 
 
+        }
+
+        private void remove_word_Click(object sender, RoutedEventArgs e)
+        {
+            TextBlock1.Text = " ";
+        }
+
+        private void show_word_Click(object sender, RoutedEventArgs e)
+        {
+            TextBlock1.Text = result;
         }
     }
 }

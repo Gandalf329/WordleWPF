@@ -40,6 +40,8 @@
             <TextBox x:Name="Cell29" MaxLength="1" HorizontalAlignment="Left" Margin="274,363,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="52" Height="55" FontSize="36" TextAlignment="Center" KeyUp="Cell29_KeyUp"/>
             <TextBox x:Name="Cell30" MaxLength="1" HorizontalAlignment="Left" Margin="331,363,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="52" Height="55" FontSize="36" TextAlignment="Center"/>
             <TextBlock x:Name="TextBlock1" Canvas.Left="199" TextWrapping="Wrap" Text="TextBlock" Canvas.Top="450"/>
+            <Button x:Name="remove_word" Content="Remove word" Canvas.Left="10" Canvas.Top="24" Height="34" Width="88" Click="remove_word_Click"/>
+            <Button x:Name="show_word" Content="Show word" Canvas.Left="10" Canvas.Top="63" Height="34" Width="88" HorizontalAlignment="Center" VerticalAlignment="Center" Click="show_word_Click"/>
 
         </Canvas>
         <Button x:Name="CheckButton" Content="Enter" HorizontalAlignment="Left" Margin="383,423,0,0" VerticalAlignment="Top" Background="#FFD2FFC3" Height="55" Width="117" Click="CheckButton_Click" IsDefault="True"/>
