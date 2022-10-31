@@ -28,14 +28,28 @@ namespace WordleWPF
             GetDict();
             
             InitializeComponent();
-            
+            this.Loaded += MainWindow_Loaded;
         }
         int num = 0;
         string result = "";
         string check = "";
         string path = "D:\\progVis\\Test6\\en_five.txt";
+        int time = 0;
         Dictionary<int, string> dict_counts = new Dictionary<int, string>();
+        System.Windows.Threading.DispatcherTimer timer = new System.Windows.Threading.DispatcherTimer();
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            
 
+            timer.Tick += new EventHandler(timerTick);
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Start();
+        }
+        private void timerTick(object sender, EventArgs e)
+        {
+            time++;
+            TimerLabel.Content = time.ToString();
+        }
         public void GetWord()
         {
             Random rnd = new Random();
@@ -493,14 +507,21 @@ namespace WordleWPF
             }
             if(number == 5 && check != result)
             {
-                MessageBox.Show("End!\n You LOSER!!!");
-            }else if(number == 5 && check == result)
-            {
-                MessageBox.Show("End!\n You Win!!!");
-
-            }else if(check == result)
-            {
-                MessageBox.Show("You Win!!!");
+                timer.Stop();
+                MessageBox.Show($"End!\n You LOSER!!!\nYour time: {time}s");
+                time = 0;
+            }
+            else if(number == 5 && check == result)
+            {           
+                timer.Stop();
+                MessageBox.Show($"End!\n You Win!!!\nYour time: {time}s");
+                time = 0;
+            }
+            else if(check == result)
+            {                
+                timer.Stop();
+                MessageBox.Show($"You Win!!!\nYour time: {time}s");
+                time = 0;
                 Cell1.IsEnabled = false;
                 Cell2.IsEnabled = false;
                 Cell3.IsEnabled = false;
@@ -816,6 +837,7 @@ namespace WordleWPF
         private void ResetButton_Click(object sender, RoutedEventArgs e)
 
         {
+            timer.Start();
             GetWord();
             num = 0;
             Cell1.Background = Brushes.White;
